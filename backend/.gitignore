@@ -1,0 +1,11 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+
+# Carpeta de compilación
+dist/
+
+# Archivos temporales
+*.log
