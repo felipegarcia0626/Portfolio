@@ -6,11 +6,9 @@ Professional personal portfolio project with:
 - SQL: PortfolioDB database with stored procedures
 
 ## 🚀 Current Status
-✅ Iteration 1 completed:
-- Backend setup (Node + TypeScript)
-- Connection to SQL Server (usrPortfolioDB)
-- Endpoint /api/health
-- Initial SQL scripts (Database + service user)
+✅ Iteration 2 completed:
+- Iteration 1: Backend setup (Node + TypeScript) + SQL setup (PortfolioDB, usrPortfolioDB, base tables)
+- Iteration 2: About module (spGetAbout + /api/about)
 
 ## 📂 Project Structure
 Portfolio/
@@ -27,7 +25,7 @@ cd Portfolio
 See instructions in backend/README.md.
 
 3️⃣ Configure SQL
-Check scripts in the sql/ folder.
+Check scripts in sql/README.md.
 
 ---
 
@@ -39,17 +37,15 @@ Proyecto profesional de portafolio personal con:
 - SQL: Base de datos PortfolioDB con procedimientos almacenados
 
 ## 🚀 Estado actual
-✅ Iteración 1 completada:
-- Configuración backend (Node + TypeScript)
-- Conexión a SQL Server (usrPortfolioDB)
-- Endpoint /api/health
-- Scripts SQL iniciales (BD + usuario)
+✅ Iteración 2 completada:
+- Iteración 1: Configuración backend (Node + TypeScript) + SQL (PortfolioDB, usrPortfolioDB, tablas base)
+- Iteración 2: Módulo About (spGetAbout + /api/about)
 
 ## 📂 Estructura del proyecto
 Portfolio/
 ├── backend/    # API en Node + TypeScript
 ├── sql/        # Scripts SQL
-└── frontend/   # (Próxima iteración Angular)
+└── frontend/   # (Próxima iteración: Angular)
 
 ## 📌 Cómo usar
 1️⃣ Clonar el proyecto
@@ -60,4 +56,4 @@ cd Portfolio
 Ver instrucciones en backend/README.md.
 
 3️⃣ Configurar SQL
-Ver scripts en carpeta sql/.
+Ver scripts en sql/README.md.

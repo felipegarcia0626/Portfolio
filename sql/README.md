@@ -3,12 +3,9 @@
 This folder contains all SQL scripts organized by iteration to create and configure the Portfolio database.
 
 ## 🚀 Current Status
-✅ Iteration 1 completed:
-- Database creation script (PortfolioDB)
-- Service user creation script (usrPortfolioDB)
-- Initial table structures
-
-Future iterations will add more tables and stored procedures.
+✅ Iteration 2 completed:
+- Iteration 1: PortfolioDB, usrPortfolioDB, base tables (tbAbout, tbProjects, tbContact)
+- Iteration 2: About module (spGetAbout + initial About data)
 
 ## 📂 Folder Structure
 sql/
@@ -16,17 +13,13 @@ sql/
  │    ├── 01_create_database.sql
  │    ├── 02_create_tables.sql
  │    ├── 03_create_user.sql
+ │    ├── 04_create_tbErrors.sql
  ├── iteration2_about/
+ │    ├── 01_insert_tbAbout.sql
+ │    ├── 02_create_spGetAbout.sql
  ├── iteration3_projects/
  ├── iteration4_contact/
  └── README.md
-
-## 📌 How to Use Iteration 1
-1️⃣ Open SQL Server Management Studio (SSMS)  
-2️⃣ Execute 01_create_database.sql  
-3️⃣ Execute 02_create_tables.sql  
-4️⃣ Execute 03_create_user.sql  
-5️⃣ Confirm connection using the credentials defined in the backend .env
 
 ---
 
@@ -35,12 +28,9 @@ sql/
 Esta carpeta contiene todos los scripts SQL organizados por iteración para crear y configurar la base de datos del Portafolio.
 
 ## 🚀 Estado actual
-✅ Iteración 1 completada:
-- Script de creación de base de datos (PortfolioDB)
-- Script de creación de usuario de servicio (usrPortfolioDB)
-- Estructuras iniciales de tablas
-
-En futuras iteraciones se agregarán más tablas y procedimientos almacenados.
+✅ Iteración 2 completada:
+- Iteración 1: PortfolioDB, usrPortfolioDB, tablas base (tbAbout, tbProjects, tbContact)
+- Iteración 2: Módulo About (spGetAbout + datos iniciales de About)
 
 ## 📂 Estructura de carpetas
 sql/
@@ -48,14 +38,10 @@ sql/
  │    ├── 01_create_database.sql
  │    ├── 02_create_tables.sql
  │    ├── 03_create_user.sql
+ │    ├── 04_create_tbErrors.sql
  ├── iteration2_about/
+ │    ├── 01_insert_tbAbout.sql
+ │    ├── 02_create_spGetAbout.sql
  ├── iteration3_projects/
  ├── iteration4_contact/
  └── README.md
-
-## 📌 Cómo usar Iteración 1
-1️⃣ Abrir SQL Server Management Studio (SSMS)  
-2️⃣ Ejecutar 01_create_database.sql  
-3️⃣ Ejecutar 02_create_tables.sql  
-4️⃣ Ejecutar 03_create_user.sql  
-5️⃣ Confirmar conexión usando las credenciales definidas en el .env del backend

@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
+import aboutRoutes from './routes/aboutRoutes';
 
 // Cargamos variables de entorno
 dotenv.config();
@@ -31,3 +32,6 @@ app.get('/api/health', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
 });
+
+// Registramos el router para /api/about
+app.use('/api/about', aboutRoutes);
