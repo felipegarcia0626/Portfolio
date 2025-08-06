@@ -7,6 +7,7 @@ This folder contains all SQL scripts organized by iteration to create and config
 - Iteration 1: PortfolioDB, usrPortfolioDB, base tables (tbAbout, tbProjects, tbContact)
 - Iteration 2: About module (spGetAbout + initial About data)
 - Iteration 3: Projects module (Recreate tbProjects + spGetProjects + initial Projects data)
+- Iteration 4: Contact module (tbContactInfo + spInsertContact + spGetContactInfo)
 
 ## 📂 Folder Structure
 sql/
@@ -23,6 +24,10 @@ sql/
  │    ├── 01_create_spGetProjects.sql
  │    ├── 02_insert_tbProjects
  ├── iteration4_contact/
+ │    ├── 01_create_tbContactInfo.sql
+ │    ├── 02_insert_tbContactInfo.sql
+ │    ├── 03_create_spInsertContact.sql
+ │    ├──  04_dbo.spGetContactInfo
  └── README.md
 
 ---
@@ -35,7 +40,8 @@ Esta carpeta contiene todos los scripts SQL organizados por iteración para crea
 ✅ Iteración 2 completada:
 - Iteración 1: PortfolioDB, usrPortfolioDB, tablas base (tbAbout, tbProjects, tbContact)
 - Iteración 2: Módulo About (spGetAbout + datos iniciales de About)
-- Iteration 3: Módulo Projects (Recrear tbProjects + spGetProjects + datos iniciales de About)
+- Iteración 3: Módulo Projects (Recrear tbProjects + spGetProjects + datos iniciales de About)
+- Iteración 4: Módulo contact (tbContactInfo + spInsertContact + spGetContactInfo)
 
 ## 📂 Estructura de carpetas
 sql/
@@ -52,4 +58,8 @@ sql/
  │    ├── 01_create_spGetProjects.sql
  │    ├── 02_insert_tbProjects
  ├── iteration4_contact/
+ │    ├── 01_create_tbContactInfo.sql
+ │    ├── 02_insert_tbContactInfo.sql
+ │    ├── 03_create_spInsertContact.sql
+ │    ├──  04_dbo.spGetContactInfo
  └── README.md

@@ -10,6 +10,7 @@ Professional personal portfolio project with:
 - Iteration 1: Backend setup (Node + TypeScript) + SQL setup (PortfolioDB, usrPortfolioDB, base tables)
 - Iteration 2: About module (spGetAbout + /api/about)
 - Iteration 3: Projects module (spGetProjects + /api/projects)
+- Iteration 4: Contact module (spGetContactInfo + spInsertContact + /api/contact + /middleware/validateContact)
 
 ## 📂 Project Structure
 Portfolio/
@@ -42,6 +43,7 @@ Proyecto profesional de portafolio personal con:
 - Iteración 1: Configuración backend (Node + TypeScript) + SQL (PortfolioDB, usrPortfolioDB, tablas base)
 - Iteración 2: Módulo About (spGetAbout + /api/about)
 - Iteration 3: Módulo Projects (spGetProjects + /api/projects)
+- Iteration 4: Módulo Contact (spGetContactInfo + spInsertContact + /api/contact + /middleware/validateContact)
 
 ## 📂 Estructura del proyecto
 Portfolio/
