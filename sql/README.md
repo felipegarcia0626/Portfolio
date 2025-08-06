@@ -6,6 +6,7 @@ This folder contains all SQL scripts organized by iteration to create and config
 ✅ Iteration 2 completed:
 - Iteration 1: PortfolioDB, usrPortfolioDB, base tables (tbAbout, tbProjects, tbContact)
 - Iteration 2: About module (spGetAbout + initial About data)
+- Iteration 3: Projects module (Recreate tbProjects + spGetProjects + initial Projects data)
 
 ## 📂 Folder Structure
 sql/
@@ -18,6 +19,9 @@ sql/
  │    ├── 01_insert_tbAbout.sql
  │    ├── 02_create_spGetAbout.sql
  ├── iteration3_projects/
+ │    ├── 00_recreate_tbProjects.sql
+ │    ├── 01_create_spGetProjects.sql
+ │    ├── 02_insert_tbProjects
  ├── iteration4_contact/
  └── README.md
 
@@ -31,6 +35,7 @@ Esta carpeta contiene todos los scripts SQL organizados por iteración para crea
 ✅ Iteración 2 completada:
 - Iteración 1: PortfolioDB, usrPortfolioDB, tablas base (tbAbout, tbProjects, tbContact)
 - Iteración 2: Módulo About (spGetAbout + datos iniciales de About)
+- Iteration 3: Módulo Projects (Recrear tbProjects + spGetProjects + datos iniciales de About)
 
 ## 📂 Estructura de carpetas
 sql/
@@ -43,5 +48,8 @@ sql/
  │    ├── 01_insert_tbAbout.sql
  │    ├── 02_create_spGetAbout.sql
  ├── iteration3_projects/
+ │    ├── 00_recreate_tbProjects.sql
+ │    ├── 01_create_spGetProjects.sql
+ │    ├── 02_insert_tbProjects
  ├── iteration4_contact/
  └── README.md

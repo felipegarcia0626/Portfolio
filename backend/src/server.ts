@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
 import aboutRoutes from './routes/aboutRoutes';
+import projectRoutes from './routes/projectsRoutes'
 
 // Cargamos variables de entorno
 dotenv.config();
@@ -35,3 +36,6 @@ app.listen(PORT, () => {
 
 // Registramos el router para /api/about
 app.use('/api/about', aboutRoutes);
+
+// Registramos el router para /api/projects. Solo '/api' ya que en el route ya se definió la ruta '/projects'.
+app.use('/api', projectRoutes);
