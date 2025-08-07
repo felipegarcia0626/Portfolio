@@ -1,0 +1,33 @@
+<h1>Contacto</h1>
+
+<!-- Mostrar información de contacto dinámica -->
+<div *ngFor="let info of contactInfo">
+  <span [innerHTML]="info.Icon"></span>
+  <strong>{{ info.InfoLabel }}:</strong> {{ info.InfoValue }}
+</div>
+
+<hr />
+
+<!-- Formulario de contacto -->
+<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+  <label>
+    Nombre:
+    <input type="text" [(ngModel)]="ContactName" name="ContactName" required />
+  </label>
+  <br />
+  <label>
+    Email:
+    <input type="email" [(ngModel)]="ContactEmail" name="ContactEmail" required />
+  </label>
+  <br />
+  <label>
+    Mensaje:
+    <textarea [(ngModel)]="ContactMessage" name="ContactMessage" required></textarea>
+  </label>
+  <br />
+  <button type="submit" [disabled]="sending || !contactForm.form.valid">Enviar</button>
+</form>
+
+<div *ngIf="sending">Enviando mensaje...</div>
+<div *ngIf="success === true">¡Mensaje enviado correctamente!</div>
+<div *ngIf="success === false">Error al enviar mensaje. Intenta de nuevo.</div>

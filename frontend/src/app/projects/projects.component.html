@@ -1,0 +1,18 @@
+<!-- Lista de proyectos si existen -->
+<section *ngIf="projects.length > 0; else loadingProjects">
+  <h1>Proyectos</h1>
+  <div *ngFor="let project of projects">
+    <h2>{{ project.ProjectName }}</h2>
+    <p>{{ project.Description }}</p>
+    <div><strong>Tecnologías:</strong> {{ project.Technologies }}</div>
+    <a [href]="project.GitHubURL" target="_blank">Ver en GitHub</a>
+    <span *ngIf="project.DemoURL">
+      | <a [href]="project.DemoURL" target="_blank">Demo</a>
+    </span>
+    <hr />
+  </div>
+</section>
+<!-- Mensaje alternativo mientras carga o si no hay proyectos -->
+<ng-template #loadingProjects>
+  <p>Cargando proyectos...</p>
+</ng-template>

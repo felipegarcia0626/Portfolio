@@ -9,7 +9,7 @@ GO
 /*
 ===================================================
  Autor: Luis Felipe García Gómez
- Fecha: 2025-08-04
+ Fecha: 2025-08-06
  Descripción: Creación sp para guardar datos de contacto de los usuarios
 ===================================================
 */

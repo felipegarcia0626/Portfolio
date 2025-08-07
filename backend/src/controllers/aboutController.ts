@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import sql from 'mssql';
 import { connectDB } from '../config/db';
 
 /**

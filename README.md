@@ -11,12 +11,17 @@ Professional personal portfolio project with:
 - Iteration 2: About module (spGetAbout + /api/about)
 - Iteration 3: Projects module (spGetProjects + /api/projects)
 - Iteration 4: Contact module (spGetContactInfo + spInsertContact + /api/contact + /middleware/validateContact)
+- Iteration 5: Create an Angular 17+ SPA that consumes the backend:
+    - Functional `About`, `Projects`, and `Contact` components
+    - Endpoints to `/api/about`, `/api/projects`, `/api/contact` 
+    - Implemented route navigation with lazy loading
+    - Configured proxy (`proxy.conf.json`).
 
 ## 📂 Project Structure
 Portfolio/
 ├── backend/    # API in Node + TypeScript
 ├── sql/        # SQL Scripts
-└── frontend/   # (Next iteration: Angular)
+└── frontend/   # Angular 17+
 
 ## 📌 How to Use
 1️⃣ Clone the project
@@ -42,14 +47,19 @@ Proyecto profesional de portafolio personal con:
 ✅ Iteración 2 completada:
 - Iteración 1: Configuración backend (Node + TypeScript) + SQL (PortfolioDB, usrPortfolioDB, tablas base)
 - Iteración 2: Módulo About (spGetAbout + /api/about)
-- Iteration 3: Módulo Projects (spGetProjects + /api/projects)
-- Iteration 4: Módulo Contact (spGetContactInfo + spInsertContact + /api/contact + /middleware/validateContact)
+- Iteración 3: Módulo Projects (spGetProjects + /api/projects)
+- Iteración 4: Módulo Contact (spGetContactInfo + spInsertContact + /api/contact + /middleware/validateContact)
+- Iteración 5: Crear una SPA en Angular 17+ que consuma el backend:
+    - Componentes `About`, `Projects` y `Contact` funcionales
+    - Conexión real a endpoints `/api/about`, `/api/projects`, `/api/contact`
+    - Navegación entre rutas implementada con lazy loading
+    - Proxy configurado (`proxy.conf.json`).
 
 ## 📂 Estructura del proyecto
 Portfolio/
 ├── backend/    # API en Node + TypeScript
 ├── sql/        # Scripts SQL
-└── frontend/   # (Próxima iteración: Angular)
+└── frontend/   # Angular 17+
 
 ## 📌 Cómo usar
 1️⃣ Clonar el proyecto

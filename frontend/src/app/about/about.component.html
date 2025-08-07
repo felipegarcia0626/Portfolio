@@ -1,0 +1,10 @@
+<!-- Vista About: muestra información si aboutData no es null -->
+<section *ngIf="aboutData">
+  <h1>{{ aboutData.PortfolioName }}</h1>
+  <h2>{{ aboutData.PortfolioTitle }}</h2>
+  <p>{{ aboutData.PortfolioDescription }}</p>
+</section>
+<!-- Mensaje alternativo si no hay datos (opcional) -->
+<div *ngIf="!aboutData">
+  <p>Cargando información...</p>
+</div>
