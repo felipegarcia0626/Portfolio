@@ -36,6 +36,15 @@ export class AboutComponent implements OnInit {
     });
   }
   downloadCV(): void {
-    if (this.about?.cvUrl) window.open(this.about.cvUrl, '_blank');
+    if (!this.about?.cvUrl) return;
+
+    // Si viene una URL absoluta (http/https), se usa tal cual.
+    // Si viene relativa (/assets/...), se antepone el origin del front (http://localhost:4200 en dev).
+    const isAbsolute = /^https?:\/\//i.test(this.about.cvUrl);
+    const url = isAbsolute
+      ? this.about.cvUrl
+      : `${window.location.origin}${this.about.cvUrl.startsWith('/') ? '' : '/'}${this.about.cvUrl}`;
+
+    window.open(url, '_blank');
   }
 }

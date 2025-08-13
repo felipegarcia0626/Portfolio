@@ -8,6 +8,7 @@ Backend of the professional portfolio developed in Node.js + TypeScript, connect
 - Iteration 2: About module (spGetAbout + /api/about)
 - Iteration 3: Projects module (spGetProjects + /api/projects)
 - Iteration 4: Contact module (spInsertContact + spGetContactInfo + /api/contact + /middleware/validateContact)
+- Iteration 5.1: Restructuring
 
 ## 📂 Project Structure
 src/
@@ -39,6 +40,7 @@ Backend del portafolio profesional desarrollado en Node.js + TypeScript, conecta
 - Iteración 2: Módulo About (spGetAbout + /api/about)
 - Iteración 3: Módulo Projects (spGetProjects + /api/projects)
 - Iteración 4: Módulo Contact (spInsertContact + spGetContactInfo + /api/contact + /middleware/validateContact)
+- Iteración 5.1: Reestructuración.
 
 ## 📂 Estructura del proyecto
 src/

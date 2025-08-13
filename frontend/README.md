@@ -2,7 +2,7 @@
 
 ## Frontend
 
-## ✅ Iteration 6 — Angular SPA with Standalone and Lazy Loading
+## ✅ Iteration 5 — Angular SPA with Standalone and Lazy Loading
 
 ### ✔️ Objective:
 Implement the portfolio frontend as a professional SPA in Angular 17+, consuming backend services with best practices.
@@ -18,23 +18,31 @@ Implement the portfolio frontend as a professional SPA in Angular 17+, consuming
 ### ✔️ Relevant structure:
 ```bash
 frontend/
-└── src/ 
-    └── app/ 
-        ├── about/ 
-        │ └── about.component.ts/html/scss 
-        ├── projects/ 
-        │ └── projects.component.ts/html/scss 
-        ├── contact/ 
-        │ └── contact.component.ts/html/scss 
-        ├── services/ 
-        │ ├── about.service.ts 
-        │ ├── projects.service.ts 
-        │ └── contact.service.ts 
-        ├── app.routes.ts 
-        ├── app.component.ts/html/scss 
+└── src/
+    └── app/
+        ├── about/
+        │   └── about.component.ts/html/scss
+        ├── projects/
+        │   └── projects.component.ts/html/scss
+        ├── contact/
+        │   └── contact.component.ts/html/scss
+        ├── complementary-education/
+        │   └── complementary-education.component.ts/html/scss
+        ├── education/
+        │   └── education.component.ts/html/scss
+        ├── experience/
+        │   └── experience.component.ts/html/scss
+        ├── skills/
+        │   └── skills.component.ts/html/scss
+        ├── services/
+        │   ├── about.service.ts
+        │   ├── projects.service.ts
+        │   └── contact.service.ts
+        ├── app.routes.ts
+        ├── app.component.ts/html/scss
         └── main.ts
 
-## ✅ Iteración 6 — SPA Angular con Standalone y Lazy Loading
+## ✅ Iteración 5 — SPA Angular con Standalone y Lazy Loading
 
 ### ✔️ Objetivo:
 Implementar el frontend del portafolio como una SPA profesional en Angular 17+, que consuma los servicios del backend con buenas prácticas.
@@ -58,6 +66,14 @@ frontend/
         │   └── projects.component.ts/html/scss
         ├── contact/
         │   └── contact.component.ts/html/scss
+        ├── complementary-education/
+        │   └── complementary-education.component.ts/html/scss
+        ├── education/
+        │   └── education.component.ts/html/scss
+        ├── experience/
+        │   └── experience.component.ts/html/scss
+        ├── skills/
+        │   └── skills.component.ts/html/scss
         ├── services/
         │   ├── about.service.ts
         │   ├── projects.service.ts

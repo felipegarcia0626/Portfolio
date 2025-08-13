@@ -36,8 +36,21 @@ export const getContactInfo = async (_req: Request, res: Response) => {
     // Ejecutamos el procedimiento almacenado
     const result = await pool.request().execute('spGetContactInfo');
 
-    // Enviamos los datos obtenidos como respuesta en formato JSON
-    res.json(result.recordset);
+     // Fuerza a array
+    const rows = Array.isArray(result.recordset) ? result.recordset : [result.recordset];
+
+    // Normaliza el casing y ordena por OrderIndex si existe
+    const data = rows
+      .map(r => ({
+        infoLabel:  r.InfoLabel  ?? r.infoLabel  ?? '',
+        infoValue:  r.InfoValue  ?? r.infoValue  ?? '',
+        icon:       r.Icon       ?? r.icon       ?? '',
+        orderIndex: r.OrderIndex ?? r.orderIndex ?? 0,
+      }))
+      .sort((a, b) => a.orderIndex - b.orderIndex);
+
+    res.json(data);
+    
   } catch (error) {
     console.error('Error en getContact:', error);
 

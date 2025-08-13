@@ -16,6 +16,7 @@ Professional personal portfolio project with:
     - Endpoints to `/api/about`, `/api/projects`, `/api/contact` 
     - Implemented route navigation with lazy loading
     - Configured proxy (`proxy.conf.json`).
+- Iteration 5.1: Restructuring 
 
 ## 📂 Project Structure
 Portfolio/
@@ -54,6 +55,7 @@ Proyecto profesional de portafolio personal con:
     - Conexión real a endpoints `/api/about`, `/api/projects`, `/api/contact`
     - Navegación entre rutas implementada con lazy loading
     - Proxy configurado (`proxy.conf.json`).
+- Iteración 5.1: Reestructuración
 
 ## 📂 Estructura del proyecto
 Portfolio/

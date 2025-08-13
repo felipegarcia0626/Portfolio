@@ -8,6 +8,7 @@ This folder contains all SQL scripts organized by iteration to create and config
 - Iteration 2: About module (spGetAbout + initial About data)
 - Iteration 3: Projects module (Recreate tbProjects + spGetProjects + initial Projects data)
 - Iteration 4: Contact module (tbContactInfo + spInsertContact + spGetContactInfo)
+- Iteration 5.1: Restructuring 
 
 ## 📂 Folder Structure
 sql/
@@ -28,6 +29,11 @@ sql/
  │    ├── 02_insert_tbContactInfo.sql
  │    ├── 03_create_spInsertContact.sql
  │    ├──  04_dbo.spGetContactInfo
+ ├── iteration5.1_alter_about/
+ │    ├── 01_reestructurar_about.sql
+ │    ├── 02_spGetAboutProfile.sql
+ │    ├── 03_spGetProjects.sql
+ │    ├── 04_dbo.spInsertContactMessage.sql
  └── README.md
 
 ---
@@ -42,6 +48,7 @@ Esta carpeta contiene todos los scripts SQL organizados por iteración para crea
 - Iteración 2: Módulo About (spGetAbout + datos iniciales de About)
 - Iteración 3: Módulo Projects (Recrear tbProjects + spGetProjects + datos iniciales de About)
 - Iteración 4: Módulo contact (tbContactInfo + spInsertContact + spGetContactInfo)
+- Iteración 5.1: Reestructuración.
 
 ## 📂 Estructura de carpetas
 sql/
@@ -62,4 +69,9 @@ sql/
  │    ├── 02_insert_tbContactInfo.sql
  │    ├── 03_create_spInsertContact.sql
  │    ├──  04_dbo.spGetContactInfo
+ ├── iteration5.1_alter_about/
+ │    ├── 01_reestructurar_about.sql
+ │    ├── 02_spGetAboutProfile.sql
+ │    ├── 03_spGetProjects.sql
+ │    ├── 04_dbo.spInsertContactMessage.sql
  └── README.md
