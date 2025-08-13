@@ -1,33 +1,30 @@
 <h1>Contacto</h1>
 
-<!-- Mostrar información de contacto dinámica -->
-<div *ngFor="let info of contactInfo">
-  <span [innerHTML]="info.Icon"></span>
-  <strong>{{ info.InfoLabel }}:</strong> {{ info.InfoValue }}
+<section *ngIf="loading"><p>Cargando información de contacto...</p></section>
+<section *ngIf="error"><p style="color:red;">Error al cargar info de contacto.</p></section>
+
+<div *ngIf="!loading && !error">
+  <div *ngFor="let info of contactInfo">
+    <strong>{{ info.infoLabel }}:</strong> {{ info.infoValue }}
+  </div>
 </div>
 
-<hr />
-
-<!-- Formulario de contacto -->
-<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-  <label>
-    Nombre:
-    <input type="text" [(ngModel)]="ContactName" name="ContactName" required />
+<form (ngSubmit)="onSubmit()" #f="ngForm" style="margin-top:12px;">
+  <label>Nombre:
+    <input type="text" [(ngModel)]="contactName" name="contactName" required />
   </label>
   <br />
-  <label>
-    Email:
-    <input type="email" [(ngModel)]="ContactEmail" name="ContactEmail" required />
+  <label>Email:
+    <input type="email" [(ngModel)]="contactEmail" name="contactEmail" required />
   </label>
   <br />
-  <label>
-    Mensaje:
-    <textarea [(ngModel)]="ContactMessage" name="ContactMessage" required></textarea>
+  <label>Mensaje:
+    <textarea [(ngModel)]="contactMessage" name="contactMessage" required></textarea>
   </label>
   <br />
-  <button type="submit" [disabled]="sending || !contactForm.form.valid">Enviar</button>
+  <button type="submit" [disabled]="sending || !f.form.valid">Enviar</button>
 </form>
 
-<div *ngIf="sending">Enviando mensaje...</div>
+<div *ngIf="sending">Enviando...</div>
 <div *ngIf="success === true">¡Mensaje enviado correctamente!</div>
 <div *ngIf="success === false">Error al enviar mensaje. Intenta de nuevo.</div>

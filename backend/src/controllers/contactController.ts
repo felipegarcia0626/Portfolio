@@ -6,15 +6,15 @@ import sql from 'mssql';
     Controlador que ejecuta el procedimiento almacenado spinsertContact.
     POST /api/contact
  */
-export const insertContact = async (req: Request, res: Response) => {
+export const postContactMessage = async (req: Request, res: Response) => {
   try {
-    const { ContactName, ContactEmail, ContactMessage } = req.body;
+    const { contactName, contactEmail, contactMessage } = req.body;
 
     const pool = await connectDB();
     await pool.request()
-      .input('ContactName', sql.NVarChar(100), ContactName)
-      .input('ContactEmail', sql.NVarChar(100), ContactEmail)
-      .input('ContactMessage', sql.NVarChar(1000), ContactMessage)
+      .input('ContactName', sql.NVarChar(100), contactName)
+      .input('ContactEmail', sql.NVarChar(100), contactEmail)
+      .input('ContactMessage', sql.NVarChar(1000), contactMessage)
       .execute('spInsertContact');
 
     res.status(201).json({ status: 'Mensaje enviado con éxito ✅' });
@@ -28,7 +28,7 @@ export const insertContact = async (req: Request, res: Response) => {
     getContact
     Controlador que ejecuta el procedimiento almacenado spGetContactInfo y devuelve la información de la tabla tbContactInfo.
  */
-export const getContact = async (req: Request, res: Response) => {
+export const getContactInfo = async (_req: Request, res: Response) => {
   try {
     // Conectamos a la base de datos usando la función centralizada connectDB
     const pool = await connectDB();

@@ -4,17 +4,17 @@ import { Observable } from 'rxjs';
 
 // Estructura para la info de contacto mostrada (GET /api/contact)
 export interface ContactInfo {
-  InfoLabel: string;
-  InfoValue: string;
-  Icon: string;
-  OrderIndex: number;
+  infoLabel: string;
+  infoValue: string;
+  icon: string;
+  orderIndex: number;
 }
 
 // Estructura para el mensaje enviado (POST /api/contact)
 export interface ContactMessage {
-  ContactName: string;
-  ContactEmail: string;
-  ContactMessage: string;
+  contactName: string;
+  contactEmail: string;
+  contactMessage: string;
 }
 
 /**

@@ -4,19 +4,19 @@ import { Observable } from 'rxjs';
 
 // Define el tipo de dato esperado desde /api/projects
 export interface Project {
-  ProjectName: string;
-  Description: string;
-  Technologies: string;
-  GitHubURL: string;
-  LiveDemoURL: string | null;
+  id: number;
+  projectName: string;
+  projectDescription?: string;
+  technologies?: string;
+  gitHubUrl?: string;
+  demoUrl?: string;
+  orderIndex: number;
+  createDate: string;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class ProjectsService {
   constructor(private http: HttpClient) {}
-
   getProjects(): Observable<Project[]> {
     return this.http.get<Project[]>('/api/projects');
   }

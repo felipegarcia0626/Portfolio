@@ -1,10 +1,31 @@
 <!-- Vista About: muestra información si aboutData no es null -->
-<section *ngIf="aboutData">
-  <h1>{{ aboutData.PortfolioName }}</h1>
-  <h2>{{ aboutData.PortfolioTitle }}</h2>
-  <p>{{ aboutData.PortfolioDescription }}</p>
+<section *ngIf="loading"><p>Cargando perfil...</p></section>
+<section *ngIf="error"><p style="color:red;">Error al cargar información.</p></section>
+
+<section *ngIf="about && !loading && !error">
+  <img [src]="about.avatarUrl" alt="Avatar" width="120" style="border-radius: 50%; margin-bottom:8px;" />
+  <h1>{{ about.portfolioName }}</h1>
+  <div>{{ about.city }}</div>
+  <p>{{ about.profileDescription }}</p>
+  <button type="button" (click)="downloadCV()">Descargar CV</button>
+
+  <h3>Contacto</h3>
+  <div *ngFor="let c of about.contactInfo">
+    <strong>{{ c.infoLabel }}:</strong> {{ c.infoValue }}
+  </div>
+
+  <app-skills [skills]="about.skills"></app-skills>
+  <app-experience [items]="about.experience"></app-experience>
+  <app-education [items]="about.education"></app-education>
+  <app-complementary-education [items]="about.complementaryEducation"></app-complementary-education>
+
+  <section class="achievements">
+    <h3>Reconocimientos y distinciones</h3>
+    <ul><li *ngFor="let a of about.achievements">{{ a.description }}</li></ul>
+  </section>
 </section>
+
 <!-- Mensaje alternativo si no hay datos (opcional) -->
-<div *ngIf="!aboutData">
+<div *ngIf="!about">
   <p>Cargando información...</p>
 </div>

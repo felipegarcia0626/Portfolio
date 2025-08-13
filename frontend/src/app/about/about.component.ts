@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AboutService, AboutInfo } from '../services/about.service';
-
+import { AboutService, AboutProfile } from '../services/about.service';
+import { SkillsComponent } from '../skills/skills.component';
+import { ExperienceComponent } from '../experience/experience.component';
+import { EducationComponent } from '../education/education.component';
+import { ComplementaryEducationComponent } from '../complementary-education/complementary-education.component';
 /**
  * Componente About
  * Standalone: no depende de un módulo tradicional
@@ -10,13 +13,16 @@ import { AboutService, AboutInfo } from '../services/about.service';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SkillsComponent, ExperienceComponent, EducationComponent, ComplementaryEducationComponent],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-})
+}) 
+
 export class AboutComponent implements OnInit {
   // Variable para almacenar la información obtenida del backend
-  aboutData: AboutInfo | null = null;
+  about: AboutProfile | null = null;
+  loading = true;
+  error = false;
 
   // Inyección del servicio AboutService para obtener datos del backend
   constructor(private aboutService: AboutService) {}
@@ -24,12 +30,12 @@ export class AboutComponent implements OnInit {
   // ngOnInit se ejecuta automáticamente cuando el componente se crea
   ngOnInit(): void {
     // Llamada al servicio para obtener datos de "About"
-    this.aboutService.getAbout().subscribe({
-      next: (data: any) => {
-        // ✅ Toma el primer objeto del array
-        this.aboutData = Array.isArray(data) ? data[0] : data;
-        console.log('📦 aboutData:', this.aboutData);
-      },
+    this.aboutService.getAboutProfile().subscribe({
+      next: (data) => { this.about = data; this.loading = false; },
+      error: () => { this.error = true; this.loading = false; }
     });
+  }
+  downloadCV(): void {
+    if (this.about?.cvUrl) window.open(this.about.cvUrl, '_blank');
   }
 }

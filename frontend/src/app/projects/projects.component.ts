@@ -17,18 +17,17 @@ import { ProjectsService, Project } from '../services/projects.service';
 export class ProjectsComponent implements OnInit {
   // Variable para almacenar la lista de proyectos
   projects: Project[] = [];
+  loading = true;
+  error = false;
 
   // Inyección del servicio ProjectsService para obtener datos
-  constructor(private ProjectsService: ProjectsService) {}
+  constructor(private projectsService: ProjectsService) {}
 
   // Al iniciar, solicita la lista de proyectos al backend
   ngOnInit(): void {
-    this.ProjectsService.getProjects().subscribe({
-      next: (data) => {
-        this.projects = data;
-        console.log('🧪 projects:', this.projects);
-      },      
-      error: (err) => console.error('Error loading projects:', err),
+    this.projectsService.getProjects().subscribe({
+      next: (data) => { this.projects = data; this.loading = false; },
+      error: () => { this.error = true; this.loading = false; }
     });
   }
 }
