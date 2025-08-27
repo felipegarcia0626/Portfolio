@@ -17,6 +17,7 @@ Professional personal portfolio project with:
     - Implemented route navigation with lazy loading
     - Configured proxy (`proxy.conf.json`).
 - Iteration 5.1: Restructuring 
+- Iteration 6: Design with Angular Material
 
 ## 📂 Project Structure
 Portfolio/
@@ -56,6 +57,7 @@ Proyecto profesional de portafolio personal con:
     - Navegación entre rutas implementada con lazy loading
     - Proxy configurado (`proxy.conf.json`).
 - Iteración 5.1: Reestructuración
+- Iteración 6: Diseño con Angular Material
 
 ## 📂 Estructura del proyecto
 Portfolio/

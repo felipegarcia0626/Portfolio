@@ -34,6 +34,7 @@ export interface AboutProfile {
   complementaryEducation: ComplementaryEducationItem[];
 }
 
+///*
 @Injectable({ providedIn: 'root' })
 export class AboutService {
   constructor(private http: HttpClient) {}
@@ -42,4 +43,3 @@ export class AboutService {
     return this.http.get<AboutProfile>('/api/about');
   }
 }
-

@@ -3,7 +3,7 @@ import { connectDB } from '../config/db';
 import sql from 'mssql';
 /**
     insertContact
-    Controlador que ejecuta el procedimiento almacenado spinsertContact.
+    Controlador que ejecuta el procedimiento almacenado spinsertContactMessage.
     POST /api/contact
  */
 export const postContactMessage = async (req: Request, res: Response) => {
@@ -15,7 +15,7 @@ export const postContactMessage = async (req: Request, res: Response) => {
       .input('ContactName', sql.NVarChar(100), contactName)
       .input('ContactEmail', sql.NVarChar(100), contactEmail)
       .input('ContactMessage', sql.NVarChar(1000), contactMessage)
-      .execute('spInsertContact');
+      .execute('spInsertContactMessage');
 
     res.status(201).json({ status: 'Mensaje enviado con éxito ✅' });
   } catch (error) {

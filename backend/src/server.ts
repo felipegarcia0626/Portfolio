@@ -28,10 +28,12 @@ app.get('/api/health', async (req, res) => {
       });
     }
   });
+  
+// Registramos el router para /api
+app.use('/api', Routes);
+
 // Levantamos servidor
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
 });
 
-// Registramos el router para /api
-app.use('/api', Routes);

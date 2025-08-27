@@ -1,17 +1,29 @@
 <!-- Lista de proyectos si existen -->
-<section *ngIf="loading"><p>Cargando proyectos...</p></section>
-<section *ngIf="error"><p style="color:red;">Error al cargar proyectos.</p></section>
-<section *ngIf="!loading && !error">
-  <h1>Proyectos</h1>
-  <ng-container *ngIf="projects.length === 0">
-    <p>Aún no hay proyectos públicos. Pronto agregaré más.</p>
-  </ng-container>
-  <div *ngFor="let p of projects">
-    <h2>{{ p.projectName }}</h2>
-    <p>{{ p.projectDescription }}</p>
-    <div><strong>Tecnologías:</strong> {{ p.technologies }}</div>
-    <a *ngIf="p.gitHubUrl" [href]="p.gitHubUrl" target="_blank">GitHub</a>
-    <span *ngIf="p.demoUrl"> | <a [href]="p.demoUrl" target="_blank">Demo</a></span>
-    <hr />
-  </div>
-</section>
+@if (loading) {
+  <section><p>Cargando proyectos...</p></section>
+}
+@if (error) {
+  <section><p style="color:red;">Error al cargar proyectos.</p></section>
+}
+@if (!loading && !error) {
+  <section>
+    <h1>Proyectos</h1>
+    @if (projects.length === 0) {
+      <p>Aún no hay proyectos públicos. Pronto agregaré más.</p>
+    }
+    @for (p of projects; track p) {
+      <div>
+        <h2>{{ p.projectName }}</h2>
+        <p>{{ p.projectDescription }}</p>
+        <div><strong>Tecnologías:</strong> {{ p.technologies }}</div>
+        @if (p.gitHubUrl) {
+          <a [href]="p.gitHubUrl" target="_blank">GitHub</a>
+        }
+        @if (p.demoUrl) {
+          <span> | <a [href]="p.demoUrl" target="_blank">Demo</a></span>
+        }
+        <hr />
+      </div>
+    }
+  </section>
+}

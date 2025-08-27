@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'theme/material-theme';
+
+:root {
+  --bg: #0a0c10;
+  --surface: #14181f;
+  --card: #181c24;
+  --border: #2e3440;
+  --text: #f0f2f7;
+  --sub: #a6afbd;
+}
+html, body { height: 100%; }
+body { margin: 0; background: linear-gradient(#121722, #0a0c10); color: var(--text); }
+.container { max-width: 1360px; margin: 0 auto; padding: 16px; }

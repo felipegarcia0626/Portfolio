@@ -1,13 +1,21 @@
 <h1>Contacto</h1>
 
-<section *ngIf="loading"><p>Cargando información de contacto...</p></section>
-<section *ngIf="error"><p style="color:red;">Error al cargar info de contacto.</p></section>
+@if (loading) {
+  <section><p>Cargando información de contacto...</p></section>
+}
+@if (error) {
+  <section><p style="color:red;">Error al cargar info de contacto.</p></section>
+}
 
-<div *ngIf="!loading && !error">
-  <div *ngFor="let info of contactInfo">
-    <strong>{{ info.infoLabel }}:</strong> {{ info.infoValue }}
+@if (!loading && !error) {
+  <div>
+    @for (info of contactInfo; track info) {
+      <div>
+        <strong>{{ info.infoLabel }}:</strong> {{ info.infoValue }}
+      </div>
+    }
   </div>
-</div>
+}
 
 <form (ngSubmit)="onSubmit()" #f="ngForm" style="margin-top:12px;">
   <label>Nombre:
@@ -25,6 +33,12 @@
   <button type="submit" [disabled]="sending || !f.form.valid">Enviar</button>
 </form>
 
-<div *ngIf="sending">Enviando...</div>
-<div *ngIf="success === true">¡Mensaje enviado correctamente!</div>
-<div *ngIf="success === false">Error al enviar mensaje. Intenta de nuevo.</div>
+@if (sending) {
+  <div>Enviando...</div>
+}
+@if (success === true) {
+  <div>¡Mensaje enviado correctamente!</div>
+}
+@if (success === false) {
+  <div>Error al enviar mensaje. Intenta de nuevo.</div>
+}

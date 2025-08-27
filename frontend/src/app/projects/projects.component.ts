@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ProjectsService, Project } from '../services/projects.service';
 
 /**
@@ -10,7 +10,7 @@ import { ProjectsService, Project } from '../services/projects.service';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
